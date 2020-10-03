@@ -6,7 +6,7 @@ class person{
 int id;
 string s;
 public:
-    ~person(){
+    virtual ~person(){//making the deconstuctor virtual so that the when deleting, it calls the decorstuctor of the correct class
         cout<<"deleting a person\n";
     }
 
