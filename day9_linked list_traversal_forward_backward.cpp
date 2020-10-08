@@ -69,6 +69,25 @@ while(curr){
 head=prev;
 return head;
 }
+
+void forward_traversal(Node* temp){
+    while(temp!=NULL){
+        cout<<temp->data<<' ';
+        temp=temp->next;
+    }
+    cout<<'\n';
+}
+
+void reverse_traversal(Node* temp){
+
+    if(temp==NULL){
+        return;
+    }
+    reverse_traversal(temp->next);
+    cout<<temp->data<<' ';
+    return;
+}
+
 int main(){
 Node * head;
 head=NULL;
@@ -88,8 +107,10 @@ head =insertAtNthPosition(head,6,11);
 head =insertAtNthPosition(head,8,11);
 head =deleteAtNthPosition(head,4);
 //traverse(head);
-head=reverse(head);
-traverse(head);
+//head=reverse(head);
+//traverse(head);
+//forward_traversal(head);
+reverse_traversal(head);
 //cout<<head->data;
 return 0;
 }
