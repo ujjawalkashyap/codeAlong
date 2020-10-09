@@ -87,6 +87,11 @@ void reverse_traversal(Node* temp){
     cout<<temp->data<<' ';
     return;
 }
+Node* reverse_recursive(Node* temp){
+    if(temp==NULL){
+
+    }
+}
 
 int main(){
 Node * head;
