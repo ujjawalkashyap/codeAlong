@@ -7,19 +7,22 @@ unsigned int count;
 
 public:
     counter():count(0){
-
     }
 
+    counter(int initial_count):count(initial_count){
+
+    }
     counter operator ++(){
         ++count;
-        counter temp;
+        /*counter temp;
         temp.count=count;
-        return temp;
+        return temp;*/
+        return counter(count);// unnamed temporary object
     }
 
-    void getCount(){
+    unsigned int getCount(){
+        return count;
 
-    cout<<"count is "<<count<<'\n';
     }
 };
 
@@ -29,8 +32,9 @@ counter c1,c2,c3;
 ++c2;
 ++c2;
 c3=++c2;
-c1.getCount();
-c2.getCount();
-c3.getCount();
+cout<<"count is "<<c1.getCount()<<'\n';
+cout<<"count is "<<c1.getCount()<<'\n';
+cout<<"count is "<<c1.getCount()<<'\n';
+
 return 0;
 }
