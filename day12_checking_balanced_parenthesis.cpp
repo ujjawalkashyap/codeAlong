@@ -8,7 +8,7 @@ bool checkParenthesis(string s){
         if(s[index]=='{'or s[index]=='{'or s[index]=='{'){
             ch.push(s[index]);
         }
-        else if(ch.empty()||s[index]!=ch.top() ){
+        else if(ch.empty()||s[index]!=ch.top()){
             return false;
         }
         else
